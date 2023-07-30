@@ -13,5 +13,10 @@
   },
   "devDependencies": {
     "jest": "^29.4.2"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^3.0.1",
+    "inquirer": "^8.2.4",
+    "is-css3-color": "^1.0.0"
   }
 }
