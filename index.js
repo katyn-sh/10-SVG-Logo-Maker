@@ -1,8 +1,10 @@
+// inquirer and FS import
 const inquirer = require("inquirer");
 const fs = require('fs');
 const { generateSvg } = require('./lib/generateSvg');
 const { makeShape } = require('./lib/makeShape');
 
+// Inquirer prompts
 inquirer
   .prompt([
     {
@@ -31,6 +33,7 @@ inquirer
     const svgPath = './dist/logo.svg';
     const finalLogo = makeShape(data);
 
+    // Generated svg logo
     fs.writeFile(svgPath, generateSvg(finalLogo), (err) =>
       err ? console.error(err) : console.log('Generated logo.svg')
     );
